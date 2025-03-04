@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-interface NumberInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface NumberInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   value: string;
   onChange: (value: string) => void;
   max?: number;

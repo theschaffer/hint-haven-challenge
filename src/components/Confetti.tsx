@@ -54,18 +54,20 @@ const Confetti = ({ active }: ConfettiProps) => {
 
   return (
     <>
-      <style jsx>{`
-        @keyframes fall {
-          to {
-            top: 105%;
+      <style>
+        {`
+          @keyframes fall {
+            to {
+              top: 105%;
+            }
           }
-        }
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
           }
-        }
-      `}</style>
+        `}
+      </style>
       {particles.map((particle) => (
         <div key={particle.id} style={particle.style} />
       ))}
